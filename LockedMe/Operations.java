@@ -7,7 +7,7 @@ public class Operations {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	public void add() 
+	public void add()throws Exception 
 	{
 		System.out.println("Enter File Name to Add");
 		String fnme = sc.nextLine();
