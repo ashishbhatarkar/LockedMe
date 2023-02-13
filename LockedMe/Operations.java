@@ -1,6 +1,7 @@
 package LockedMe;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Operations {
@@ -34,9 +35,32 @@ public class Operations {
 	}
 	
 	public void searchf() {
+		try {
 		File dty = new File("C:\\Users\\Darsh\\Project\\src\\Content Files");
+		System.out.println("Enter File Name to Search");
+		String fnme = sc.nextLine();
 		
-		
+		File[] files = dty.listFiles();
+		int count = 0;
+		for(File fo : files) {
+			String nme = fo.getName();
+			if(nme.equals(fnme)) {
+				
+				File fd = new File(fnme);
+				Scanner scan = new Scanner(fd);
+				while(scan.hasNextLine()) {
+					System.out.println(scan.nextLine());
+				}
+				count=1;
+				}
+			}		
+		if(count==0) {
+			System.out.println("File Not Found");
+		}
+		}catch(FileNotFoundException ex) {
+			System.out.println("File Not Found");
+		}
+	
 	}
 
 }
