@@ -1,15 +1,24 @@
 package LockedMe;
+import LockedMe.lpOperation;
+
+import java.io.FileNotFoundException;
+
 import LockedMe.Operations;
 
 public class Mainfun {
 	
-	public static void FrontSc() {
-		System.out.println("Locker Pvt Ltd Company");
-		System.out.println("Devloper : ASHISH BHATARKAR");
-		System.out.println("-----------------------------");
-	}
-
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		
+		lpOperation opes = new lpOperation();
+		
+		opes.FrontSc();
+		lpOperation.MenuDr();
+			
+	
+		
+		
+		
+		
 		
 		
 
