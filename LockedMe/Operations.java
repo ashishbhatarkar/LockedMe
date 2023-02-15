@@ -12,7 +12,7 @@ public class Operations {
 		System.out.println("Enter File Name to Add");
 		String fnme = sc.nextLine();
 		
-		File adf = new File(fnme);
+		File adf = new File("E:\\Files\\" + fnme);
 			
 			if(adf.exists()) {
 				System.out.println("File Already Exits");
@@ -20,13 +20,13 @@ public class Operations {
 			
 			else {
 				adf.createNewFile();
-				System.out.println( fnme + "File Created");
+				System.out.println( fnme + " File Created");
 			}
 	}
 	public void deletefile() {
 		System.out.println("Enter File Name to Delete");
 		String fnme = sc.nextLine();
-		File def = new File(fnme);
+		File def = new File("E:\\Files\\" + fnme);
 			
 			if(def.delete())
 				System.out.println("File has Deleted");
@@ -35,32 +35,23 @@ public class Operations {
 	}
 	
 	public void searchf() {
-		try {
-		File dty = new File("C:\\Users\\Darsh\\Project\\src\\Content Files");
+	
+		
+		File dty = new File("E:\\Files\\");
 		System.out.println("Enter File Name to Search");
 		String fnme = sc.nextLine();
 		
-		File[] files = dty.listFiles();
-		int count = 0;
-		for(File fo : files) {
-			String nme = fo.getName();
-			if(nme.equals(fnme)) {
-				
-				File fd = new File(fnme);
-				Scanner scan = new Scanner(fd);
-				while(scan.hasNextLine()) {
-					System.out.println(scan.nextLine());
-				}
-				count=1;
-				}
-			}		
-		if(count==0) {
-			System.out.println("File Not Found");
-		}
-		}catch(FileNotFoundException ex) {
-			System.out.println("File Not Found");
-		}
-	
+		String[] list = dty.list();
+		for(String fo : list) {
+			
+			if(fnme.equals(fo)) {
+				System.out.println("File Found : " + fnme);	
+				return;
+			}
+		}	
+		System.out.println("File Not Found");
+		
 	}
+	
 
 }
