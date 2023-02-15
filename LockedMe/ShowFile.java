@@ -22,6 +22,7 @@ public class ShowFile {
 	public static void ShowFiles() {
 		
 		System.out.println("Show Files In Ascending order");
+		System.out.println("-------------------------------");
 		getFiles().forEach(System.out::println);
 		System.out.println("-------------------");
 	}

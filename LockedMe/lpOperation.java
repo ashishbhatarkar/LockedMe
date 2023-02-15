@@ -6,9 +6,10 @@ public class lpOperation {
 	
 	
 	public static void FrontSc() {
-		System.out.println("Locker Pvt Ltd Company");
-		System.out.println("Devloper : ASHISH BHATARKAR");
+		System.out.println("Company Locker Pvt Ltd");
+		System.out.println("Devloper Name : ASHISH BHATARKAR");
 		System.out.println("-----------------------------");
+		System.out.println("------------------------------");
 	}
 	
 	public static void MenuDr()throws Exception {
@@ -67,7 +68,7 @@ public class lpOperation {
 				break;
 				
 			case 3:
-					System.out.println("Exiting From The Application");
+					System.out.println("Exiting From The Application\n*******************************\n****Thanks For Using App****");
 					break;
 					
 			default:

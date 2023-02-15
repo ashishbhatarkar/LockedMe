@@ -13,6 +13,7 @@ public class Mainfun {
 		
 		opes.FrontSc();
 		lpOperation.MenuDr();
+		
 			
 	
 		

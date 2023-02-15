@@ -29,7 +29,7 @@ public class Operations {
 		File def = new File("E:\\Files\\" + fnme);
 			
 			if(def.delete())
-				System.out.println("File has Deleted");
+				System.out.println(fnme + " File has Deleted");
 			else
 				System.out.println("File Not Fount");	
 	}
